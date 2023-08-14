@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/View/SignInFrame.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/LMS_Database_Connection/BookDao.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/LMS_Database_Connection/LoanDao.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/View/ManageMentFrame.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/View/UserInformationFrame.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/Model/Loan.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/Model/User.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/View/AddUserFrame.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/Service/AdminService.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/LMS_Database_Connection/AdminDao.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/Model/Admin.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/LMS_Database_Connection/UserDao.java</file>
+            <file>file:/D:/Study/Study_java/Code/LMS_PROJECT/src/Model/Book.java</file>
+        </group>
+    </open-files>
+</project-private>
