@@ -252,5 +252,34 @@ public class LoanDao {
         return memberLoanTransaction;
     }
     
+    public List<Loan> checkProcedure(Member member, Book book) {
+        List<Loan> loansProcedure = new ArrayList<Loan>();
+        Connection connection = JDBCConnection.getJDBCConnection();
+        String sql = "SELECT * FROM loans WHERE ID_BOOK = ? AND ID_MEMBER = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, book.getBookId());
+            preparedStatement.setInt(2, member.getMemberID());
+            ResultSet rs = preparedStatement.executeQuery();
+           
+            while (rs.next()) {
+                Loan loan = new Loan();                
+                loan.setLoanId(rs.getInt("LOAN_ID"));
+                loan.setIdBook(rs.getInt("ID_BOOK"));
+                loan.setIdMember(rs.getInt("ID_MEMBER"));
+                loan.setLoanDate(rs.getDate("LOAN_DATE"));
+                loan.setDueDate(rs.getDate("DUE_DATE"));
+                loan.setReturnDate(rs.getDate("RETURN_DATE"));
+                
+                loansProcedure.add(loan);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+        return loansProcedure;
+        
+    } 
+    
 }
 

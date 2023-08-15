@@ -60,6 +60,8 @@ public class AddBookFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         addNewBookTitleLabel = new javax.swing.JLabel();
 
+        setTitle("Add Book Frame");
+
         jPanel1.setBackground(new java.awt.Color(244, 244, 244));
 
         bookNameTextField.setBackground(new java.awt.Color(255, 156, 192));
@@ -294,6 +296,25 @@ public class AddBookFrame extends javax.swing.JFrame {
             warningLabel.setText("Enter the (*) requirement");
             warningLabel.setForeground(Color.red);
 
+        } else if (Integer.parseInt(publicYearTextField.getText()) <= 0){
+            JOptionPane.showMessageDialog(null,
+                    "Year Public of book cannot be zero or negative!",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE);
+            publicYearTextField.setText("");
+        } else if (Integer.parseInt(availabilityTextField.getText()) < 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Quantity of book cannot be negative!",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE);
+            availabilityTextField.setText("");
+        } else if (Integer.parseInt(publicYearTextField.getText()) <= 0 
+                   && Integer.parseInt(availabilityTextField.getText()) < 0){
+                
+            JOptionPane.showMessageDialog(null,
+                    "Public Year and Quantity cannot be negative!",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE);   
         } else {
             String name = bookNameTextField.getText();
             String author = authorTextField.getText();

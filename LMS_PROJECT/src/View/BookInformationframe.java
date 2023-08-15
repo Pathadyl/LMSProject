@@ -104,6 +104,8 @@ public class BookInformationframe extends javax.swing.JFrame {
         showModeMenuItem = new javax.swing.JMenuItem();
         editModeMenuItem = new javax.swing.JMenuItem();
 
+        setTitle("Book Infomation Frame");
+
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         authorLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -344,13 +346,20 @@ public class BookInformationframe extends javax.swing.JFrame {
         String genre = genreTextField.getText();
         String publicYear = yearPublicTextField.getText();
         String availability = availabilityTextField.getText();
-            
-        book.setBookName(name);
-        book.setBookAuthor(author);
-        book.setBookDescription(description);
-        book.setBookGerne(genre);
-        book.setYearPublic(publicYear);
-        book.setAvailability(Integer.parseInt(availability));
+        
+        if (Integer.parseInt(publicYear) <= 0 
+            || Integer.parseInt(availability) < 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Year Public of book and Quantity of book cannot be negative or zero!",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE);
+        } else {
+            book.setBookName(name); 
+            book.setBookAuthor(author);
+            book.setBookDescription(description);
+            book.setBookGerne(genre);
+            book.setYearPublic(publicYear);
+            book.setAvailability(Integer.parseInt(availability));
             
             String ConfirmationMessage = "Do you want to change this book to: \n"
                                        + "Name: " + name + "\n" 
@@ -372,6 +381,7 @@ public class BookInformationframe extends javax.swing.JFrame {
                                               JOptionPane.INFORMATION_MESSAGE);
                 adminService.updateBook(book);
             }
+        }
     }//GEN-LAST:event_UpdateBookButtonActionPerformed
 
     private void showModeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showModeMenuItemActionPerformed

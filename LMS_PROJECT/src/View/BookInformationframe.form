@@ -30,6 +30,9 @@
       </SubComponents>
     </Menu>
   </NonVisualComponents>
+  <Properties>
+    <Property name="title" type="java.lang.String" value="Book Infomation Frame"/>
+  </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="bar"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>

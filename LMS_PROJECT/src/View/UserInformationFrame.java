@@ -103,6 +103,8 @@ public class UserInformationFrame extends javax.swing.JFrame {
         showInfoMode = new javax.swing.JMenuItem();
         editInfoMode = new javax.swing.JMenuItem();
 
+        setTitle("Member Infomation Frame");
+
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         nameInfoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N

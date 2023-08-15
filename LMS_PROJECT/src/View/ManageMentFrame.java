@@ -335,6 +335,7 @@ public class ManageMentFrame extends javax.swing.JFrame {
         borrowButton = new javax.swing.JButton();
         borrowStatusLabel = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        jButton1 = new javax.swing.JButton();
         loanTransactionPanel = new javax.swing.JPanel();
         loanTransactionLabel = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -346,6 +347,7 @@ public class ManageMentFrame extends javax.swing.JFrame {
         welcomeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Management Frame");
 
         managementButtonGroupPanel.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -413,30 +415,30 @@ public class ManageMentFrame extends javax.swing.JFrame {
             managementButtonGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(managementButtonGroupPanelLayout.createSequentialGroup()
                 .addGroup(managementButtonGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(managementButtonGroupPanelLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(userManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bookManagementButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(procedureButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(logOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(managementButtonGroupPanelLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         managementButtonGroupPanelLayout.setVerticalGroup(
             managementButtonGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(managementButtonGroupPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(34, 34, 34)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(userManagementButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(bookManagementButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(procedureButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
+                .addContainerGap())
         );
 
         managementPanel.setAlignmentX(0.0F);
@@ -816,6 +818,7 @@ public class ManageMentFrame extends javax.swing.JFrame {
         bookIDLabel.setForeground(new java.awt.Color(0, 0, 0));
         bookIDLabel.setText("Book ID:");
 
+        availabilityTextField.setEditable(false);
         availabilityTextField.setBackground(new java.awt.Color(255, 156, 192));
         availabilityTextField.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -878,12 +881,6 @@ public class ManageMentFrame extends javax.swing.JFrame {
         borrowDateTextField.setEditable(false);
         borrowDateTextField.setBackground(new java.awt.Color(255, 156, 192));
         borrowDateTextField.setForeground(new java.awt.Color(0, 0, 0));
-        borrowDateTextField.setEnabled(false);
-        borrowDateTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                borrowDateTextFieldActionPerformed(evt);
-            }
-        });
 
         dueDateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         dueDateLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -892,11 +889,6 @@ public class ManageMentFrame extends javax.swing.JFrame {
         dueDateTextField.setEditable(false);
         dueDateTextField.setBackground(new java.awt.Color(255, 156, 192));
         dueDateTextField.setForeground(new java.awt.Color(0, 0, 0));
-        dueDateTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dueDateTextFieldActionPerformed(evt);
-            }
-        });
 
         returnDateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         returnDateLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -905,11 +897,6 @@ public class ManageMentFrame extends javax.swing.JFrame {
         statusTextField.setEditable(false);
         statusTextField.setBackground(new java.awt.Color(255, 156, 192));
         statusTextField.setForeground(new java.awt.Color(0, 0, 0));
-        statusTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statusTextFieldActionPerformed(evt);
-            }
-        });
 
         statusLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         statusLabel.setForeground(new java.awt.Color(0, 0, 0));
@@ -918,13 +905,10 @@ public class ManageMentFrame extends javax.swing.JFrame {
         returnDateTextField.setEditable(false);
         returnDateTextField.setBackground(new java.awt.Color(255, 156, 192));
         returnDateTextField.setForeground(new java.awt.Color(0, 0, 0));
-        returnDateTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                returnDateTextFieldActionPerformed(evt);
-            }
-        });
 
         returnButton.setBackground(new java.awt.Color(157, 0, 57));
+        returnButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        returnButton.setForeground(new java.awt.Color(255, 255, 255));
         returnButton.setText("Complete Return!");
         returnButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -941,30 +925,33 @@ public class ManageMentFrame extends javax.swing.JFrame {
                 .addComponent(returnConfirmLabel)
                 .addGap(45, 45, 45))
             .addGroup(returnPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(returnButton)
-                    .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(returnPanelLayout.createSequentialGroup()
-                            .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(returnDateLabel)
-                                .addComponent(statusLabel))
-                            .addGap(18, 18, 18)
-                            .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(returnPanelLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(statusTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(returnPanelLayout.createSequentialGroup()
-                                    .addComponent(returnDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, Short.MAX_VALUE))))
-                        .addGroup(returnPanelLayout.createSequentialGroup()
-                            .addComponent(dueDateLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dueDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(returnPanelLayout.createSequentialGroup()
-                            .addComponent(borrowDateLabel)
-                            .addGap(18, 18, 18)
-                            .addComponent(borrowDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(returnPanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(returnPanelLayout.createSequentialGroup()
+                                .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(returnDateLabel)
+                                    .addComponent(statusLabel))
+                                .addGap(18, 18, 18)
+                                .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(returnPanelLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(statusTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(returnPanelLayout.createSequentialGroup()
+                                        .addComponent(returnDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(returnPanelLayout.createSequentialGroup()
+                                .addComponent(dueDateLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(dueDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(returnPanelLayout.createSequentialGroup()
+                                .addComponent(borrowDateLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(borrowDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(returnPanelLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(returnButton)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         returnPanelLayout.setVerticalGroup(
@@ -988,9 +975,9 @@ public class ManageMentFrame extends javax.swing.JFrame {
                 .addGroup(returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(statusLabel)
                     .addComponent(statusTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(returnButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         procedure.add(returnPanel, "card2");
@@ -1017,17 +1004,14 @@ public class ManageMentFrame extends javax.swing.JFrame {
         borrowDate2Label.setForeground(new java.awt.Color(0, 0, 0));
         borrowDate2Label.setText("Borrow Date:");
 
+        borrowDate2TextField.setEditable(false);
         borrowDate2TextField.setBackground(new java.awt.Color(255, 156, 192));
-        borrowDate2TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                borrowDate2TextFieldActionPerformed(evt);
-            }
-        });
 
         dueDate2Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         dueDate2Label.setForeground(new java.awt.Color(0, 0, 0));
         dueDate2Label.setText("Due Date:");
 
+        dueDate2TextField.setEditable(false);
         dueDate2TextField.setBackground(new java.awt.Color(255, 156, 192));
 
         borrowButton.setBackground(new java.awt.Color(157, 0, 57));
@@ -1092,40 +1076,49 @@ public class ManageMentFrame extends javax.swing.JFrame {
 
         procedure.add(borrowPanel, "card3");
 
+        jButton1.setBackground(new java.awt.Color(157, 0, 57));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("ResetData");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout checkingPanelLayout = new javax.swing.GroupLayout(checkingPanel);
         checkingPanel.setLayout(checkingPanelLayout);
         checkingPanelLayout.setHorizontalGroup(
             checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkingPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(infoConfirmLabel)
-                .addGap(66, 66, 66))
             .addComponent(procedure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(checkingPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(checkingPanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(memberIDLabel)
-                            .addComponent(memberNameLabel)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(availabilityLabel)
-                                .addComponent(bookNameLabel)
-                                .addComponent(bookIDLabel)))
-                        .addGap(21, 21, 21)
-                        .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(bookNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                            .addComponent(memberNameTextField)
-                            .addComponent(bookIDTextField)
-                            .addComponent(memberIDTextField)
-                            .addComponent(availabilityTextField)))
-                    .addGroup(checkingPanelLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(checkingButton)))
+                    .addComponent(memberIDLabel)
+                    .addComponent(memberNameLabel)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(availabilityLabel)
+                        .addComponent(bookNameLabel)
+                        .addComponent(bookIDLabel)))
+                .addGap(21, 21, 21)
+                .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bookNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                    .addComponent(memberNameTextField)
+                    .addComponent(bookIDTextField)
+                    .addComponent(memberIDTextField)
+                    .addComponent(availabilityTextField))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkingPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator4)
+            .addGroup(checkingPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(infoConfirmLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator4))
+                .addGap(66, 66, 66))
+            .addGroup(checkingPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(checkingButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         checkingPanelLayout.setVerticalGroup(
@@ -1155,8 +1148,9 @@ public class ManageMentFrame extends javax.swing.JFrame {
                     .addComponent(availabilityLabel)
                     .addComponent(availabilityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkingButton)
-                .addGap(0, 0, 0)
+                .addGroup(checkingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(checkingButton)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(procedure, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1466,11 +1460,14 @@ public class ManageMentFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         int memberID = Integer.parseInt(memberIDTextField.getText());
         memberProcedure = adminService.getMemberByID(memberID);
-        if(memberProcedure == null) {
+        if(memberProcedure.getMemberID() == 0) {
             JOptionPane.showMessageDialog(null, 
                                           "Member not found", 
                                           "Warning", 
                                           JOptionPane.WARNING_MESSAGE);
+            memberIDTextField.setText("");
+            memberNameTextField.setText("");
+            
         } else {
             memberNameTextField.setText(memberProcedure.getFullName());
             memberProcedureLoanTransaction = adminService.getMemberLoanTransactionByMemberID(memberID);
@@ -1485,11 +1482,13 @@ public class ManageMentFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         int bookID = Integer.parseInt(bookIDTextField.getText());
         bookProcedure = adminService.getBookByID(bookID);
-        if(bookProcedure == null) {
+        if(bookProcedure.getBookId() == 0) {
             JOptionPane.showMessageDialog(null, 
                                           "Book not found", 
                                           "Warning", 
                                           JOptionPane.WARNING_MESSAGE);
+            bookIDTextField.setText("");
+            bookNameTextField.setText("");
         } else {
             bookNameTextField.setText(bookProcedure.getBookName());
             availabilityTextField.setText(String.valueOf(bookProcedure.getAvailability()));
@@ -1498,56 +1497,14 @@ public class ManageMentFrame extends javax.swing.JFrame {
 
     private void checkingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkingButtonActionPerformed
         // TODO add your handling code here:
-        if (memberProcedureLoanTransaction.isEmpty()) {
-            // Case borrowBook
-                CardLayout cardLayout = (CardLayout) procedure.getLayout();
-                cardLayout.show(procedure, "card3");
-                
-                if(bookProcedure.getAvailability() != 0) {
-                    borrowStatusLabel.setText("Status: Available");
-                    borrowStatusLabel.setForeground(Color.green);
-                } else {
-                    borrowStatusLabel.setText("Status: Not Available!");
-                    borrowStatusLabel.setForeground(Color.red);
-                }
-                
+        if(memberIDTextField.getText().isEmpty() || bookIDTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, 
+                                          "No information checking", 
+                                          "Warning", 
+                                          JOptionPane.WARNING_MESSAGE);
         } else {
-            for (Loan loan: memberProcedureLoanTransaction) {
-                if (loan.getIdBook() == bookProcedure.getBookId() && loan.getReturnDate() == null) {
-                    // Case return book
-                    loanProcedure = loan;
-                    CardLayout cardLayout = (CardLayout) procedure.getLayout();
-                    cardLayout.show(procedure, "card2");
-                
-                    Date dueDate = loan.getDueDate();
-                    Date returnDate = Date.valueOf(LocalDate.now());
-                    borrowDateTextField.setText(loan.getLoanDate().toString());
-                    dueDateTextField.setText(dueDate.toString());
-                    returnDateTextField.setText(returnDate.toString());
-                
-                    int comparisonResult = returnDate.compareTo(dueDate);
-                    if (comparisonResult <= 0 ) {
-                        statusTextField.setText("On Time");
-                    } else {
-                        statusTextField.setText("Late");
-                    }                
-                
-                } else if (loan.getIdBook() != bookProcedure.getBookId()) {
-                    // Case borrowBook
-                    CardLayout cardLayout = (CardLayout) procedure.getLayout();
-                    cardLayout.show(procedure, "card3");
-                
-                    if(bookProcedure.getAvailability() != 0) {
-                        borrowStatusLabel.setText("Status: Available");
-                        borrowStatusLabel.setForeground(Color.green);
-                    } else {
-                    borrowStatusLabel.setText("Status: Not Available!");
-                    borrowStatusLabel.setForeground(Color.red);
-                    }
-                
-                
-                } else if (loan.getIdBook() == bookProcedure.getBookId() && loan.getReturnDate() != null) {
-                    // Case borrowBook
+            if (adminService.checkBorrow(memberProcedure, bookProcedure)) {
+                // Case borrowBook
                     CardLayout cardLayout = (CardLayout) procedure.getLayout();
                     cardLayout.show(procedure, "card3");
                 
@@ -1558,30 +1515,27 @@ public class ManageMentFrame extends javax.swing.JFrame {
                         borrowStatusLabel.setText("Status: Not Available!");
                         borrowStatusLabel.setForeground(Color.red);
                     }
+                
+            } else if (adminService.checkReturn(memberProcedure, bookProcedure).getLoanId() != 0){
+                loanProcedure = adminService.checkReturn(memberProcedure, bookProcedure);
+                CardLayout cardLayout = (CardLayout) procedure.getLayout();
+                cardLayout.show(procedure, "card2");
+                
+                Date dueDate = loanProcedure.getDueDate();
+                Date returnDate = Date.valueOf(LocalDate.now());
+                borrowDateTextField.setText(loanProcedure.getLoanDate().toString());
+                dueDateTextField.setText(dueDate.toString());
+                returnDateTextField.setText(returnDate.toString());
+                
+                int comparisonResult = returnDate.compareTo(dueDate);
+                if (comparisonResult <= 0 ) {
+                    statusTextField.setText("On Time");
+                } else {
+                    statusTextField.setText("Late");
                 }
             }
         }
     }//GEN-LAST:event_checkingButtonActionPerformed
-
-    private void borrowDateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowDateTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_borrowDateTextFieldActionPerformed
-
-    private void dueDateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dueDateTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dueDateTextFieldActionPerformed
-
-    private void statusTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_statusTextFieldActionPerformed
-
-    private void returnDateTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnDateTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_returnDateTextFieldActionPerformed
-
-    private void borrowDate2TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowDate2TextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_borrowDate2TextFieldActionPerformed
 
     private void returnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnButtonActionPerformed
         // TODO add your handling code here
@@ -1590,15 +1544,35 @@ public class ManageMentFrame extends javax.swing.JFrame {
                                      "Return Success!", 
                                      "Success", 
                                      JOptionPane.INFORMATION_MESSAGE);
+       //Add availability of Book
+       int availability = bookProcedure.getAvailability() + 1;
+       bookProcedure.setAvailability(availability);
+       adminService.updateBook(bookProcedure);
+       
+       //Reset Table
        int memberID = Integer.parseInt(memberIDTextField.getText());
        memberProcedureLoanTransaction = adminService.getMemberLoanTransactionByMemberID(memberID);
-            defaultLoanTableModel.setRowCount(0);
+       defaultLoanTableModel.setRowCount(0);
             for(Loan loan : memberProcedureLoanTransaction) {
                 setLoanTableData(loan);
             }
-       
+        resetReturnProcedure();
     }//GEN-LAST:event_returnButtonActionPerformed
-
+    
+    private void resetReturnProcedure() {
+        memberIDTextField.setText("");
+        memberNameTextField.setText("");
+        bookIDTextField.setText("");
+        bookNameTextField.setText("");
+        availabilityTextField.setText("");
+        borrowDateTextField.setText("");
+        dueDateTextField.setText("");
+        returnDateTextField.setText("");
+        statusLabel.setText("");
+        CardLayout cardLayout = (CardLayout) procedure.getLayout();
+        cardLayout.show(procedure, "card4");
+        
+    }
     private void borrowDurationComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowDurationComboBoxActionPerformed
         // TODO add your handling code here:
         borrowDate2TextField.setText(LocalDate.now().toString());
@@ -1621,6 +1595,7 @@ public class ManageMentFrame extends javax.swing.JFrame {
                                           "Book is not available", 
                                           "Warning", 
                                           JOptionPane.WARNING_MESSAGE);
+            resetBorrowProcedure();
         } else {
             loanProcedure.setIdBook(bookProcedure.getBookId());
             loanProcedure.setIdMember(memberProcedure.getMemberID());
@@ -1631,17 +1606,58 @@ public class ManageMentFrame extends javax.swing.JFrame {
                                               "Borrow Success!", 
                                               "Success", 
                                               JOptionPane.INFORMATION_MESSAGE);
+            
+            // Subtract availability
+            int availability = bookProcedure.getAvailability() - 1;
+            bookProcedure.setAvailability(availability);
+            adminService.updateBook(bookProcedure);
+            
+            //Reset Table
             int memberID = Integer.parseInt(memberIDTextField.getText());
             memberProcedureLoanTransaction = adminService.getMemberLoanTransactionByMemberID(memberID);
             defaultLoanTableModel.setRowCount(0);
             for(Loan loan : memberProcedureLoanTransaction) {
                 setLoanTableData(loan);
             }
+            resetBorrowProcedure();
             
         }
     }//GEN-LAST:event_borrowButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        memberIDTextField.setText("");
+        memberNameTextField.setText("");
+        bookIDTextField.setText("");
+        bookNameTextField.setText("");
+        availabilityTextField.setText("");
+        CardLayout cardLayout = (CardLayout) procedure.getLayout();
+        cardLayout.show(procedure, "card4");
+        
+        defaultLoanTableModel.setRowCount(0);
+        List<Loan> loans = adminService.getAllLoan();
+        
+        for (Loan loan : loans) {
+            setLoanTableData(loan);
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void resetBorrowProcedure() {
+        memberIDTextField.setText("");
+        memberNameTextField.setText("");
+        bookIDTextField.setText("");
+        bookNameTextField.setText("");
+        availabilityTextField.setText("");
+        borrowDate2TextField.setText("");
+        dueDate2TextField.setText("");
+        CardLayout cardLayout = (CardLayout) procedure.getLayout();
+        cardLayout.show(procedure, "card4");
+        
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addBookButton;
     private javax.swing.JButton addMemberButton;
@@ -1682,6 +1698,7 @@ public class ManageMentFrame extends javax.swing.JFrame {
     private javax.swing.JTextField dueDateTextField;
     private javax.swing.JComboBox<String> genreComboBox;
     private javax.swing.JLabel infoConfirmLabel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

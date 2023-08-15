@@ -181,5 +181,25 @@ public class AdminService {
    public void returnBook(int id, Date returnDate) {
        loanDao.returnBook(id, returnDate);
    }
+   
+   public Loan checkReturn(Member member, Book book) {
+       Loan loanProcedure = new Loan();
+       List<Loan> loansProcedure = loanDao.checkProcedure(member, book);
+       for(Loan loan : loansProcedure) {
+           if (loan.getReturnDate() == null) {
+               loanProcedure = loan;
+           }
+       }
+       return loanProcedure;
+   }
+   
+   public boolean checkBorrow(Member member, Book book) {
+       List<Loan> loansProcedure = loanDao.checkProcedure(member, book);
+       boolean flag = false;
+       if (loansProcedure.isEmpty() || checkReturn(member, book).getLoanId() == 0) {
+           flag = true;
+       } 
+       return flag;
+   }
     
 }

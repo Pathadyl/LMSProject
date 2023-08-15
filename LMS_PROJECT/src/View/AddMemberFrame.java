@@ -55,6 +55,8 @@ public class AddMemberFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         addMemberTitleLabel = new javax.swing.JLabel();
 
+        setTitle("Member Register Frame");
+
         jPanel1.setBackground(new java.awt.Color(244, 244, 244));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
 
